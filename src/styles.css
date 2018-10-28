@@ -92,14 +92,14 @@ h1 {
     border-radius: 5px 5px 0px 0px;
 }
 span.line {
-    background: url(app/assets/images/line.png)no-repeat;
+    background: url(assets/images/line.png)no-repeat;
     width: 103px;
     height: 2px;
     display: block;
     margin: 0.6em auto 0em;
 }
 span.w-line {
-    background: url(app/assets/images/w-line.png)no-repeat;
+    background: url(assets/images/w-line.png)no-repeat;
     width: 103px;
     height: 2px;
     display: block;
@@ -137,7 +137,7 @@ span.w-line {
     border-radius: 6px 6px 0px 0px;
 }
 span.cloud {
-    background: url(app/assets/images/cloudy.png)no-repeat;
+    background: url(assets/images/cloudy.png)no-repeat;
     width: 50px;
     height: 50px;
     display: inline-block;
