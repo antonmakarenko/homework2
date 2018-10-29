@@ -1,5 +1,6 @@
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
+import {getRandomInt} from '../get-random-int.function';
 
 export type Dest = {
     name: string,
@@ -21,7 +22,3 @@ const data: Dest[] = [
     }
 ];
 export const data$ = of(data).pipe(delay(getRandomInt(3) * 1000));
-
-function getRandomInt(max): number {
-    return Math.floor(Math.random() * Math.floor(max));
-}

@@ -6,6 +6,8 @@ import { MenuComponent } from './widget/menu/menu.component';
 import { WeatherComponent } from './widget/weather/weather.component';
 import { SocialComponent } from './widget/social/social.component';
 import { WidgetComponent } from './widget/widget.component';
+import { HeroImageComponent } from './widget/hero-image/hero-image.component';
+import { DetailsComponent } from './widget/details/details.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { WidgetComponent } from './widget/widget.component';
     MenuComponent,
     WeatherComponent,
     SocialComponent,
-    WidgetComponent
+    WidgetComponent,
+    HeroImageComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule

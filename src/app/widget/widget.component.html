@@ -1,6 +1,8 @@
 <ng-container *ngIf="destinations$ | async as destinations; else loadingTemplate">
   <div class="element-left">
-    <hww-menu [all]="destinations" (currentChange)="selectedItem = $event"></hww-menu>
+    <hww-hero-image [current]="selectedItem"></hww-hero-image>
+    <hww-menu [all]="destinations" [(current)]="selectedItem"></hww-menu>
+    <hww-details></hww-details>
   </div>
   <div class="element-right">
     <hww-weather></hww-weather>
