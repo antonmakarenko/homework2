@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'hww-social',
-  templateUrl: './social.component.html',
-  styleUrls: ['./social.component.css']
+  templateUrl: './social.component.html'
 })
 export class SocialComponent implements OnInit {
 
@@ -11,5 +10,4 @@ export class SocialComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

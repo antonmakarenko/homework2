@@ -1,13 +1,12 @@
 <div class="element-bg-img">
-  <img src="assets/images/1.jpg" alt="" class="img-responsive">
+  <img *ngIf="current.image" [src]="'assets/images/' + current.image" [alt]="current.name" class="img-responsive">
 </div>
 <div class="element-left-bottom">
   <div class="ele-strip">
     <ul>
-      <li><a href="#">Hotel</a></li>
-      <li><a href="#">Fishing</a></li>
-      <li><a href="#">Tours</a></li>
-      <li class="anc-bor"><a href="#">Weather</a></li>
+      <li *ngFor="let dest of all; last as isLast" [ngClass]="{'anc-bor': isLast}">
+        <a [innerHtml]="dest.name" (click)="select(dest)" [ngClass]="{'selected': dest === current}"></a>
+      </li>
     </ul>
   </div>
   <div class="village">
@@ -64,3 +63,4 @@
     </div>
   </div>
 </div>
+

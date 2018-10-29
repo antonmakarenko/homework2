@@ -1,0 +1,12 @@
+<ng-container *ngIf="destinations$ | async as destinations; else loadingTemplate">
+  <div class="element-left">
+    <hww-menu [all]="destinations" (currentChange)="selectedItem = $event"></hww-menu>
+  </div>
+  <div class="element-right">
+    <hww-weather></hww-weather>
+    <hww-social></hww-social>
+  </div>
+</ng-container>
+<ng-template #loadingTemplate>
+  <div style="background: white; color: black">Loading</div>
+</ng-template>

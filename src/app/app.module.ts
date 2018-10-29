@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './widget/menu/menu.component';
 import { WeatherComponent } from './widget/weather/weather.component';
 import { SocialComponent } from './widget/social/social.component';
+import { WidgetComponent } from './widget/widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     WeatherComponent,
-    SocialComponent
+    SocialComponent,
+    WidgetComponent
   ],
   imports: [
     BrowserModule
