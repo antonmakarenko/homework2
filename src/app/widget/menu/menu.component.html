@@ -1,7 +1,7 @@
 <div class="ele-strip">
   <ul>
     <li *ngFor="let dest of all; last as isLast" [ngClass]="{'anc-bor': isLast}">
-      <a [innerHtml]="dest.name" (click)="select(dest)" [ngClass]="{'selected': dest === current}"></a>
+      <a [innerHtml]="dest.name" (click)="select(dest)" class="selectable" [ngClass]="{'selected': dest === current}"></a>
     </li>
   </ul>
 </div>

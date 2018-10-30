@@ -17,7 +17,7 @@ export class MenuComponent {
   public currentChange = new EventEmitter<Dest>();
 
   public select(val: Dest) {
-    console.log('select()', val);
+    console.log('select() destination', val);
     this.current = val;
     this.currentChange.emit(val);
   }

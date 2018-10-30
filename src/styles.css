@@ -81,7 +81,6 @@ h1 {
 .ele-strip ul li a{
     font-size:1em;
     color: #fff;
-    cursor: pointer;
 }
 .ele-strip ul li a.selected {
     color: black;
@@ -475,4 +474,11 @@ i.text-info{
     .activity-desc h6 {
         font-size: 12px;
     }
+}
+.selectable {
+    cursor: pointer;
+}
+.selectable:hover {
+    background-color:cyan;
+    color:grey;
 }

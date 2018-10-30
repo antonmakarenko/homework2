@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
-import {Dest} from './destinations.data';
+import {Activity, Dest} from './destinations.data';
 import {DestinationsService} from './destinations.service';
-import {getRandomInt} from '../get-random-int.function';
+import {getRandomEl} from '../get-random.function';
 
 @Component({
   selector: 'hww-widget',
@@ -11,7 +11,8 @@ import {getRandomInt} from '../get-random-int.function';
 export class WidgetComponent implements OnInit {
 
   public destinations$: Observable<Dest[]>;
-  public selectedItem: Dest;
+  public destination: Dest;
+  public activity: Activity;
   private _sub: Subscription;
 
   constructor(
@@ -24,10 +25,8 @@ export class WidgetComponent implements OnInit {
   }
 
   private _pickRandom(collection: Dest[]) {
-      const l = collection.length;
-      if (l) {
-          this.selectedItem = collection[getRandomInt(l)];
-      }
+      this.destination = getRandomEl(collection);
+      this.activity = getRandomEl(this.destination.activities);
       this._sub.unsubscribe();
   }
 }

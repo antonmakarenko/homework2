@@ -3,7 +3,7 @@
   <span class="line"> </span>
   <div class="activity_box">
     <div class="scrollbar" id="style-2">
-      <div *ngFor="let a of dest.activities" class="activity-row">
+      <div *ngFor="let a of dest.activities" class="activity-row selectable" (click)="select(a)">
         <div class="activity-desc">
           <h5>{{a.title}}</h5>
           <p *ngFor="let descLine of a.description">{{descLine}}</p>

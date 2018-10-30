@@ -1,6 +1,6 @@
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
-import {getRandomInt} from '../get-random-int.function';
+import {getRandomInt} from '../get-random.function';
 
 export type Dest = {
     name: string,
