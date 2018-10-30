@@ -1,7 +1,7 @@
 <div class="temperatur">
-  <h5>Et harum quidem</h5>
+  <h5>{{activity.title}}</h5>
   <span class="w-line"> </span>
-  <span class="cloud"> </span>
-  <h2>14<sup class="degree">°</sup></h2>
-  <h6>Water 20<sup class="degree">°</sup></h6>
+  <span [class]="weather.conditions"> </span>
+  <h2>{{weather.temp}}<sup class="degree">°</sup></h2>
+  <h6>Humidity {{weather.humidity}}<sup class="degree">%</sup></h6>
 </div>
