@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Dest} from '../destinations.data';
+import {IDest} from '../destinations.data';
 
 @Component({
   selector: 'hww-hero-image',
@@ -8,5 +8,5 @@ import {Dest} from '../destinations.data';
 export class HeroImageComponent {
 
   @Input()
-  public current: Dest;
+  public current: IDest;
 }

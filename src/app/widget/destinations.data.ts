@@ -1,22 +1,23 @@
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 import {getRandomInt} from '../get-random.function';
+import {IGeoId} from './geo-id.interface';
 
-export type Dest = {
-    name: string,
-    image: string,
-    title: string,
-    activities: Activity[],
-};
-export type Activity = {
-    geoId: number,
-    title: string,
-    description: string[],
-    contactInfo: string,
-    images: string[],
-};
+export interface IDest {
+    name: string;
+    image: string;
+    title: string;
+    activities: IActivity[];
+}
 
-const data: Dest[] = [
+export interface IActivity extends IGeoId {
+    title: string;
+    description: string[];
+    contactInfo: string;
+    images: string[];
+}
+
+const data: IDest[] = [
     {
         name: 'Ireland',
         image: 'Ireland_090814CH184.jpg',

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Activity} from '../destinations.data';
+import {IActivity} from '../destinations.data';
 import {getRandomEl} from '../../get-random.function';
 
 @Component({
@@ -8,7 +8,7 @@ import {getRandomEl} from '../../get-random.function';
 })
 export class SocialComponent implements OnInit {
 
-  private a: Activity;
+  private a: IActivity;
   private img: string;
 
   constructor() { }
@@ -17,7 +17,7 @@ export class SocialComponent implements OnInit {
   }
 
   @Input('activity')
-  set activity(value: Activity) {
+  set activity(value: IActivity) {
     this.a = value;
     this.img = getRandomEl(value.images);
   }

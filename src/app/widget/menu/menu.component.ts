@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Dest} from '../destinations.data';
+import {IDest} from '../destinations.data';
 
 @Component({
   selector: 'hww-menu',
@@ -8,15 +8,15 @@ import {Dest} from '../destinations.data';
 export class MenuComponent {
 
   @Input()
-  public all: Dest[];
+  public all: IDest[];
 
   @Input()
-  public current: Dest;
+  public current: IDest;
 
   @Output()
-  public currentChange = new EventEmitter<Dest>();
+  public currentChange = new EventEmitter<IDest>();
 
-  public select(val: Dest) {
+  public select(val: IDest) {
     console.log('select() destination', val);
     this.current = val;
     this.currentChange.emit(val);

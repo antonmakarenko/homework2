@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { data$, Dest } from './destinations.data';
+import { data$, IDest } from './destinations.data';
 import { Observable} from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Observable} from 'rxjs';
 })
 export class DestinationsService {
 
-  public getData(): Observable<Dest[]> {
+  public getData(): Observable<IDest[]> {
     console.log('getData()');
     return data$;
   }

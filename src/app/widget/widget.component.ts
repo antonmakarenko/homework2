@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
-import {Activity, Dest} from './destinations.data';
+import {IActivity, IDest} from './destinations.data';
 import {DestinationsService} from './destinations.service';
 import {getRandomEl} from '../get-random.function';
 
@@ -10,9 +10,9 @@ import {getRandomEl} from '../get-random.function';
 })
 export class WidgetComponent implements OnInit {
 
-    public destinations$: Observable<Dest[]>;
-    private _destination: Dest;
-    public activity: Activity;
+    public destinations$: Observable<IDest[]>;
+    private _destination: IDest;
+    public activity: IActivity;
     private _sub: Subscription;
 
     constructor(
@@ -24,17 +24,17 @@ export class WidgetComponent implements OnInit {
         this._sub = this.destinations$.subscribe((v) => this._pickRandomDestination(v));
     }
 
-    private _pickRandomDestination(collection: Dest[]) {
+    private _pickRandomDestination(collection: IDest[]) {
         this.destination = getRandomEl(collection);
         this._sub.unsubscribe();
     }
 
-    set destination(value: Dest) {
+    set destination(value: IDest) {
         this._destination = value;
         this._pickRandomActivity();
     }
 
-    get destination(): Dest {
+    get destination(): IDest {
         return this._destination;
     }
 

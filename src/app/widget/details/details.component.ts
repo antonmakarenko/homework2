@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Activity, Dest} from '../destinations.data';
+import {IActivity, IDest} from '../destinations.data';
 
 @Component({
   selector: 'hww-details',
@@ -8,15 +8,15 @@ import {Activity, Dest} from '../destinations.data';
 export class DetailsComponent {
 
   @Input()
-  public dest: Dest;
+  public dest: IDest;
 
     @Input()
-    public current: Activity;
+    public current: IActivity;
 
     @Output()
-    public currentChange = new EventEmitter<Activity>();
+    public currentChange = new EventEmitter<IActivity>();
 
-    public select(val: Activity) {
+    public select(val: IActivity) {
         console.log('select() activity', val);
         this.current = val;
         this.currentChange.emit(val);
