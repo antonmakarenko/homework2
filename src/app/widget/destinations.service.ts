@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { data$, Dest } from './data';
+import { data$, Dest } from './destinations.data';
 import { Observable} from 'rxjs';
 
 @Injectable({

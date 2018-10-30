@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Dest} from '../data';
+import {Dest} from '../destinations.data';
 
 @Component({
   selector: 'hww-menu',

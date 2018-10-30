@@ -2,7 +2,7 @@
   <div class="element-left">
     <hww-hero-image [current]="selectedItem"></hww-hero-image>
     <hww-menu [all]="destinations" [(current)]="selectedItem"></hww-menu>
-    <hww-details></hww-details>
+    <hww-details [dest]="selectedItem"></hww-details>
   </div>
   <div class="element-right">
     <hww-weather></hww-weather>

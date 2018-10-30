@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
-import {Dest} from './data';
+import {Dest} from './destinations.data';
 import {DestinationsService} from './destinations.service';
 import {getRandomInt} from '../get-random-int.function';
 

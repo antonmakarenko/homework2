@@ -1,49 +1,17 @@
 <div class="village">
-  <h3>Righteous indignation & like</h3>
+  <h3>{{dest.title}}</h3>
   <span class="line"> </span>
   <div class="activity_box">
     <div class="scrollbar" id="style-2">
-      <div class="activity-row">
+      <div *ngFor="let a of dest.activities" class="activity-row">
         <div class="activity-desc">
-          <h5>Resort Address</h5>
-          <p>Sed perspiciatis</p>
-          <p>Et harum quidem</p>
-          <h6>Tel:+1285 968 685</h6>
+          <h5>{{a.title}}</h5>
+          <p *ngFor="let descLine of a.description">{{descLine}}</p>
+          <h6>Tel:{{a.contactInfo}}</h6>
         </div>
-        <div class="activity-img">
+        <div class="activity-img" *ngIf="a.images.length > 0">
           <ul>
-            <li><img src='../../../assets/images/res.jpg' alt=""/></li>
-            <li><img src='../../../assets/images/r1.jpg' alt=""/></li>
-          </ul>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <div class="activity-row">
-        <div class="activity-desc">
-          <h5>Resort Address</h5>
-          <p>Sed ut perspiciatis</p>
-          <p>Et harum quidem</p>
-          <h6>Tel:+1285 968 685</h6>
-        </div>
-        <div class="activity-img">
-          <ul>
-            <li><img src='../../../assets/images/res.jpg' alt=""/></li>
-            <li><img src='../../../assets/images/r1.jpg' alt=""/></li>
-          </ul>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <div class="activity-row">
-        <div class="activity-desc">
-          <h5>Resort Address</h5>
-          <p>Sed ut perspiciatis</p>
-          <p>Et harum quidem</p>
-          <h6>Tel:+1285 968 685</h6>
-        </div>
-        <div class="activity-img">
-          <ul>
-            <li><img src='../../../assets/images/res.jpg' alt=""/></li>
-            <li><img src='../../../assets/images/r1.jpg' alt=""/></li>
+            <li *ngFor="let i of a.images"><img [src]="'assets/images/' + i" alt=""/></li>
           </ul>
         </div>
         <div class="clear"> </div>

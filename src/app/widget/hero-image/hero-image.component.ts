@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Dest} from '../data';
+import {Dest} from '../destinations.data';
 
 @Component({
   selector: 'hww-hero-image',
