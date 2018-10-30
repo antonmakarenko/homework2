@@ -10,8 +10,8 @@ import {ISocialData} from '../social.data';
 })
 export class SocialComponent {
 
-  private a: IActivity;
-  private img: string;
+  public a: IActivity;
+  public img: string;
 
   constructor(
       private _socialFeed: SocialFeedService
