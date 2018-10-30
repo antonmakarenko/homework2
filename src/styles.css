@@ -51,12 +51,12 @@ h1 {
     text-align: center;
     font-size: 2em;
     color: #fff;
-    margin: 3em 0em 2em 0em;
+    margin: 1em 0em .5em 0em;
     font-family: 'Quicksand', sans-serif;
 }
 .element {
     width: 40%;
-    margin: 0 auto 7em;
+    margin: 0 auto 2em;
 }
 .ele-strip {
     background: #fda660;
@@ -136,6 +136,10 @@ span.w-line {
 }
 .teddy-follow li.folw-h {
     border-right: 1px solid #000;
+}
+.element-bg-img {
+    max-height: 172px;
+    overflow-y: hidden;
 }
 .element-bg-img img {
     border-radius: 6px 6px 0px 0px;
@@ -234,14 +238,14 @@ i.text-info{
     margin-bottom:1em;
 }
 .scrollbar{
-    height:115px;
+    height:300px;
     background:#fff;
     overflow-y: scroll;
     padding: 1em 1em 0em 1em;
 }
 .activity_box{
     background: #fff;
-    min-height: 120px;
+    min-height: 300px;
 }
 #style-2::-webkit-scrollbar-track
 {
