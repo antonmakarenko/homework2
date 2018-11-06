@@ -1,0 +1,27 @@
+<ng-container *ngIf="items$ | async as items">
+    <div class="wishlist" *ngIf="items.length > 0">
+        <h3>Wishlist</h3>
+        <table>
+            <colgroup>
+                <col width="100%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th class="txt-lt">Activity</th>
+                <th class="txt-rt center-col"># People</th>
+                <th class="txt-center">Modify</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of items">
+                <td class="txt-lt">{{item.activity.title}}</td>
+                <td class="txt-rt center-col">{{item.numPeople}}</td>
+                <td class="txt-center">
+                    <span class="selectable" (click)="modNum(item, -1)">[-]</span>
+                    <span class="selectable" (click)="modNum(item, 1)">[+]</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-container>

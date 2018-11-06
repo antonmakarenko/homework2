@@ -13,6 +13,7 @@ import {environment} from '../environments/environment';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {reducers} from './store';
 import {EffectsModule} from '@ngrx/effects';
+import { WishlistComponent } from './widget/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {EffectsModule} from '@ngrx/effects';
     SocialComponent,
     WidgetComponent,
     HeroImageComponent,
-    DetailsComponent
+    DetailsComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
