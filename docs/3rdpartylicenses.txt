@@ -213,7 +213,16 @@ MIT
 @angular/common
 MIT
 
+@ngrx/store
+MIT
+
+@ngrx/entity
+MIT
+
 @angular/platform-browser
+MIT
+
+@ngrx/effects
 MIT
 
 zone.js
