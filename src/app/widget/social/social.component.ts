@@ -3,6 +3,8 @@ import {IActivity} from '../destinations.data';
 import {getRandomEl} from '../../get-random.function';
 import {SocialFeedService} from './social-feed.service';
 import {ISocialData} from '../social.data';
+import {Store} from '@ngrx/store';
+import {AddWishlistItem} from '../../store/actions/wishlist.action';
 
 @Component({
   selector: 'hww-social',
@@ -14,7 +16,8 @@ export class SocialComponent {
   public img: string;
 
   constructor(
-      private _socialFeed: SocialFeedService
+      private _socialFeed: SocialFeedService,
+      private _store: Store<any>
   ) { }
 
   @Input('activity')
@@ -25,5 +28,9 @@ export class SocialComponent {
 
   public getInfo(): ISocialData {
       return this._socialFeed.getInfo(this.a.geoId);
+  }
+
+  public signUp(a: IActivity) {
+      this._store.dispatch(new AddWishlistItem(a));
   }
 }

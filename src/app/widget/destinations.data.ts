@@ -17,6 +17,11 @@ export interface IActivity extends IGeoId {
     images: string[];
 }
 
+export interface ISelectedActivity {
+    activity: IActivity;
+    numPeople: number;
+}
+
 const data: IDest[] = [
     {
         name: 'Ireland',

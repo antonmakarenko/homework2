@@ -8,6 +8,11 @@ import { SocialComponent } from './widget/social/social.component';
 import { WidgetComponent } from './widget/widget.component';
 import { HeroImageComponent } from './widget/hero-image/hero-image.component';
 import { DetailsComponent } from './widget/details/details.component';
+import {StoreModule} from '@ngrx/store';
+import {environment} from '../environments/environment';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {reducers} from './store';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { DetailsComponent } from './widget/details/details.component';
     DetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    EffectsModule.forRoot([]),
+    StoreModule.forRoot(reducers),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [],
   bootstrap: [AppComponent]
